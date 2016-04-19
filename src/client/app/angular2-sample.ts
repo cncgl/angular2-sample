@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
+import {Todo} from './todo/todo';
 
 @Component({
   selector: 'angular2-sample-app',
@@ -9,6 +10,7 @@ import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router'
   pipes: []
 })
 @RouteConfig([
+  {path: '/todo/...', name: 'Todo', component: Todo},
 ])
 export class Angular2SampleApp {
   defaultMeaning: number = 42;
